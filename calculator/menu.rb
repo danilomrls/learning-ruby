@@ -45,7 +45,19 @@ module Calculator
         puts "Pressione enter para continuar"
         gets.chomp
         system "clear || cls"
-        
+
+      when 3
+        puts "Insira os gêneros:"
+        genres = gets.chomp
+        puts "Insira o ano:"
+        year = gets.chomp.to_i
+
+        movies = operations.filter_films(genres, year)
+        puts "Resultado: "
+        puts movies
+        puts "Pressione enter para continuar"
+        gets.chomp
+        system "clear || cls"
       end
         
     end

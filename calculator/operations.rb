@@ -43,7 +43,17 @@ module Calculator
     end
   
     def filter_films(genres, year)
-      films = get_films
+      genres = genres.split(" ")
+      films = get_films[:movies]
+      result = []
+
+      films.each do |film|
+        if ((genres & film[:genres]) == genres && film[:year].to_i >= year)
+          result.push(film[:title])
+        end
+      end
+
+      return result
   
     end
     
