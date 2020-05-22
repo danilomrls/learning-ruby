@@ -34,6 +34,18 @@ module Calculator
         puts "Pressione enter para continuar"
         gets.chomp
         system "clear || cls"
+
+      when 2
+        puts "Insira o número a saber se é divisível por 25"
+        numbers = gets.chomp
+
+        ans = operations.no_integers(numbers)
+        puts "Resultado: "
+        puts ans
+        puts "Pressione enter para continuar"
+        gets.chomp
+        system "clear || cls"
+        
       end
         
     end
