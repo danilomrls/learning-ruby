@@ -7,7 +7,21 @@ module Calculator
     include ExtraOperations
   
     def biased_mean(grades, blacklist)
-    
+      sanitized_blacklist = blacklist.split(" ")
+      sanitized_grades = JSON.parse(grades)
+      
+      select_grades = sanitized_grades.select do |name,grade|
+        not sanitized_blacklist.include?(name)
+      end
+
+      sum = 0
+
+      select_grades.each do |name,grade|
+        sum += grade        
+      end
+      
+      return (sum/select_grades.size).to_f  
+
     end
   
     def no_integers(numbers)
