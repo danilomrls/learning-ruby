@@ -25,13 +25,13 @@ module Calculator
         puts "Insira as notas"
         grades = gets.chomp
 
-        puts "Insira o nome dos alunos a serem desconsiderados"
+        puts "\nInsira o nome dos alunos a serem desconsiderados"
         blacklist = gets.chomp        
         
         mean = operations.biased_mean(grades,blacklist)
         system "clear || cls"          
-        puts "A média final é : #{mean.to_s}"
-        puts "Pressione enter para continuar"
+        puts "\nA média final é : #{mean.to_s}"
+        puts "\nPressione enter para continuar"
         gets.chomp
         system "clear || cls"
 
@@ -40,9 +40,9 @@ module Calculator
         numbers = gets.chomp
 
         ans = operations.no_integers(numbers)
-        puts "Resultado: "
+        puts "\nResultado: "
         puts ans
-        puts "Pressione enter para continuar"
+        puts "\nPressione enter para continuar"
         gets.chomp
         system "clear || cls"
 
@@ -53,9 +53,9 @@ module Calculator
         year = gets.chomp.to_i
 
         movies = operations.filter_films(genres, year)
-        puts "Resultado: "
+        puts "\nResultado: "
         puts movies
-        puts "Pressione enter para continuar"
+        puts "\nPressione enter para continuar"
         gets.chomp
         system "clear || cls"
       end

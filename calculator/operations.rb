@@ -17,7 +17,7 @@ module Calculator
       sum = 0
 
       select_grades.each do |name,grade|
-        sum += grade        
+        sum += grade
       end
 
       return (sum/select_grades.size).to_f  
@@ -35,7 +35,7 @@ module Calculator
         elsif number_ending.include?(number[-2..-1])
           ans += "Yep "
         else 
-          ans += "Nope "          
+          ans += "Nope "
         end
       end
 
@@ -46,6 +46,7 @@ module Calculator
       genres = genres.split(" ")
       films = get_films[:movies]
       result = []
+      genres.map!(&:capitalize)
 
       films.each do |film|
         if ((genres & film[:genres]) == genres && film[:year].to_i >= year)
