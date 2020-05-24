@@ -30,17 +30,18 @@ module Calculator
         
         mean = operations.biased_mean(grades,blacklist)
         system "clear || cls"          
-        puts "\nA média final é : #{mean.to_s}"
+        puts "A média final é : #{mean.to_s}"
         puts "\nPressione enter para continuar"
         gets.chomp
         system "clear || cls"
 
       when 2
-        puts "Insira o número a saber se é divisível por 25"
+        puts "Insira o número a saber se são divisíveis por 25"
         numbers = gets.chomp
 
         ans = operations.no_integers(numbers)
-        puts "\nResultado: "
+        system "clear || cls"
+        puts "Resultado: "
         puts ans
         puts "\nPressione enter para continuar"
         gets.chomp
@@ -53,7 +54,8 @@ module Calculator
         year = gets.chomp.to_i
 
         movies = operations.filter_films(genres, year)
-        puts "\nResultado: "
+        system "clear || cls"
+        puts "Resultado: "
         puts movies
         puts "\nPressione enter para continuar"
         gets.chomp
